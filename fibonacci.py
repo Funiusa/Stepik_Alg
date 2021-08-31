@@ -10,8 +10,14 @@ def fib(num):
 	return second
 
 def	main():
-	n = int(input("Insert number: "))
-	print(fib(n))
+	while True:
+		n = input("Insert number or q for exit: ")
+		if n.isdigit():
+			res = fib(int(n))
+			print(res)
+		elif n == 'q':
+			print("exit")
+			break
 
 if __name__ == "__main__":
 	main()
